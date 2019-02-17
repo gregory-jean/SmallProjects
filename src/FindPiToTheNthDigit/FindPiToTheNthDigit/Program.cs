@@ -12,18 +12,20 @@
                 Console.WriteLine("What digit would you like to find Pi to?");
                 string PiDigitLengthString = Console.ReadLine();
 
-                try
+                if (int.TryParse(PiDigitLengthString, out piDigitLength))
                 {
-                    piDigitLength = int.Parse(PiDigitLengthString);
+                    string pie = GetPie(piDigitLength);
+                    if (pie != null)
+                    {
+                        Console.WriteLine(pie);
+                        break;
+                    }
                 }
-                catch (Exception)
-                {
-                    Console.WriteLine("Invalid Input, enter a number using the numerical pad.");
-                }
-            }
-            while (piDigitLength == 0);
 
-            Console.WriteLine(GetPie(piDigitLength));
+                Console.WriteLine("Invalid Input, enter a number using the numerical pad.");
+            }
+            while (true);
+
         }
 
         private static string GetPie(int piDigitLength)
