@@ -94,6 +94,7 @@ namespace ChangeCalculator
 
             // TODO Calculate remianing change values.
 
+            Console.WriteLine("Press enter to exit.");
             Console.ReadLine();
 
 
