@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.421
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChangeCalculator", "ChangeCalculator\ChangeCalculator.csproj", "{BEB77FC6-050F-405F-83BA-C726EA3D31D4}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BEB77FC6-050F-405F-83BA-C726EA3D31D4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BEB77FC6-050F-405F-83BA-C726EA3D31D4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BEB77FC6-050F-405F-83BA-C726EA3D31D4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BEB77FC6-050F-405F-83BA-C726EA3D31D4}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C4CAC4C4-64C0-497D-8A19-A5DD95CD4982}
+	EndGlobalSection
+EndGlobal
