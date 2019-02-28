@@ -11,16 +11,33 @@ namespace ChangeCalculator
         static void Main(string[] args)
         {
             double CashGiven;
-            int AmountRemaining;
+            int AmountRemaining =0;
             int HundredsReturned = 0;
             int FiftysReturned = 0;
             int TwentysReturned = 0;
             int TensReturned = 0;
             int FivesReturned = 0;
             int OnesReturned = 0;
-            
+            int ReturnedValue = 0;
+
             string CashGivenString = Console.ReadLine();
-            
+
+
+
+            int CalculateAmountReturned(int RemainingChange, int CurrentCurrencyCalculated, int CurrencyAmount)
+            {
+               
+                for (int i = RemainingChange; RemainingChange >= CurrencyAmount; i -= CurrencyAmount)
+                {
+                    CurrentCurrencyCalculated++;
+                    RemainingChange = RemainingChange - CurrencyAmount;
+                }
+
+                ReturnedValue = CurrentCurrencyCalculated;
+                AmountRemaining = (AmountRemaining - (CurrentCurrencyCalculated * CurrencyAmount));
+                return ReturnedValue;
+            }
+
             // TODO define currency ammounts, implement into program
             Currency Dollar = new Currency()
             {
@@ -39,64 +56,28 @@ namespace ChangeCalculator
             CashGiven = CashGiven * 100;
             AmountRemaining = Convert.ToInt32(CashGiven);
 
-            // TODO Create method for conversion to reduce code repitition.
+            // Calculate and print number of bills returned.
+            HundredsReturned = CalculateAmountReturned(AmountRemaining, HundredsReturned, 10000);
+            FiftysReturned = CalculateAmountReturned(AmountRemaining, FiftysReturned, 5000);
+            TwentysReturned = CalculateAmountReturned(AmountRemaining, TwentysReturned, 2000);
+            TensReturned = CalculateAmountReturned(AmountRemaining, TensReturned, 1000);
+            FivesReturned = CalculateAmountReturned(AmountRemaining, FivesReturned, 500);
+            OnesReturned = CalculateAmountReturned(AmountRemaining, OnesReturned, 100);
 
-            // Calculate how many 100 dollar bills are returned.
-            for (int i = AmountRemaining; AmountRemaining >= 10000; i -= 10000)
-            {
-                HundredsReturned++;
-                AmountRemaining = AmountRemaining - 10000;
-            }
-            Console.WriteLine("One hundred dollar bills returned : " + HundredsReturned);
-
-            // Calculate how many 50 dollar bills are returned.
-            for (int i = AmountRemaining; AmountRemaining >= 5000; i -= 5000)
-            {
-                FiftysReturned++;
-                AmountRemaining = AmountRemaining - 5000;
-            }
-            Console.WriteLine("Fifty dollar bills returned : " + FiftysReturned);
-
-            // Calculate how many 20 dollar bills are returned.
-            for (int i = AmountRemaining; AmountRemaining >= 2000; i -= 2000)
-            {
-                TwentysReturned++;
-                AmountRemaining = AmountRemaining - 2000;
-            }
-            Console.WriteLine("Twenty dollar bills returned : " + TwentysReturned);
-
-            // Calculate how many 10 dollar bills are returned.
-            for (int i = AmountRemaining; AmountRemaining >= 1000; i -= 1000)
-            {
-                TensReturned++;
-                AmountRemaining = AmountRemaining - 1000;
-            }
-            Console.WriteLine("Ten dollar bills returned : " + TensReturned);
-
-            // Calculate how many 5 dollar bills are returned.
-            for (int i = AmountRemaining; AmountRemaining >= 500; i -= 500)
-            {
-                FivesReturned++;
-                AmountRemaining = AmountRemaining - 500;
-            }
-            Console.WriteLine("Five dollar bills returned : " + FivesReturned);
-
-            // Calcualte how many 1 dollar bills returned.
-            for (int i = AmountRemaining; AmountRemaining >= 100; i-=100)
-            {
-                OnesReturned++;
-                AmountRemaining = AmountRemaining - 100;
-            }
-
-            Console.WriteLine("One dollar bills returned : " + OnesReturned);
-
-            Console.WriteLine("Change remaining : " + AmountRemaining);
+            Console.WriteLine();
+            Console.WriteLine("100's given\t" + HundredsReturned);
+            Console.WriteLine("50's given\t" + FiftysReturned);
+            Console.WriteLine("20's given\t" + TwentysReturned);
+            Console.WriteLine("10's given\t" + TensReturned);
+            Console.WriteLine("5's given\t" + FivesReturned);
+            Console.WriteLine("1's given\t" + OnesReturned + System.Environment.NewLine);
+            
+            Console.WriteLine("Amount Remaining: " + AmountRemaining + " cents." + System.Environment.NewLine);
 
             // TODO Calculate remianing change values.
 
             Console.WriteLine("Press enter to exit.");
             Console.ReadLine();
-
 
         }
     }
