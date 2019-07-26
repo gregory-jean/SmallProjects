@@ -1,0 +1,11 @@
+F:\Coding Projects\C#\SmallProjects\IntervalTimer\IntervalTimer\bin\Debug\netcoreapp2.1\IntervalTimer.deps.json
+F:\Coding Projects\C#\SmallProjects\IntervalTimer\IntervalTimer\bin\Debug\netcoreapp2.1\IntervalTimer.runtimeconfig.json
+F:\Coding Projects\C#\SmallProjects\IntervalTimer\IntervalTimer\bin\Debug\netcoreapp2.1\IntervalTimer.runtimeconfig.dev.json
+F:\Coding Projects\C#\SmallProjects\IntervalTimer\IntervalTimer\bin\Debug\netcoreapp2.1\IntervalTimer.dll
+F:\Coding Projects\C#\SmallProjects\IntervalTimer\IntervalTimer\bin\Debug\netcoreapp2.1\IntervalTimer.pdb
+F:\Coding Projects\C#\SmallProjects\IntervalTimer\IntervalTimer\obj\Debug\netcoreapp2.1\IntervalTimer.csproj.CoreCompileInputs.cache
+F:\Coding Projects\C#\SmallProjects\IntervalTimer\IntervalTimer\obj\Debug\netcoreapp2.1\IntervalTimer.AssemblyInfoInputs.cache
+F:\Coding Projects\C#\SmallProjects\IntervalTimer\IntervalTimer\obj\Debug\netcoreapp2.1\IntervalTimer.AssemblyInfo.cs
+F:\Coding Projects\C#\SmallProjects\IntervalTimer\IntervalTimer\obj\Debug\netcoreapp2.1\IntervalTimer.dll
+F:\Coding Projects\C#\SmallProjects\IntervalTimer\IntervalTimer\obj\Debug\netcoreapp2.1\IntervalTimer.pdb
+F:\Coding Projects\C#\SmallProjects\IntervalTimer\IntervalTimer\obj\Debug\netcoreapp2.1\IntervalTimer.csprojAssemblyReference.cache
